@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "Check Canvas",
+    "version": "1.0",
+    "description": "O objetivo dessa extensão e adicionar um input checkbox no canvas.",
+    "action": {
+        "default_title": "Check Canvas",
+        "default_popup": "index.html",
+        "default_icon": "logo.png"
+      },
+    "content_scripts": [
+      {
+        "matches": ["https://alunos.kenzie.com.br/*"],
+        "js": ["./services/request.js", "content.js"]
+      }
+    ],
+    "permissions": [
+      "storage",
+      "tabs"
+    ],
+    "host_permissions": [
+      "https://checkinputcanvas.herokuapp.com/*"
+    ]
+  }
+
